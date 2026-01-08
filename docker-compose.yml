@@ -1,0 +1,26 @@
+services:
+  embedding-service:
+    build: ./embedding-service
+    ports:
+      - "9000:8001"
+    volumes:
+      - K:/Projects/sentence_transformers/paraphrase-multilingual-MiniLM-L12-v2:/models
+    environment:
+      MODEL_PATH: /models
+
+  backend:
+    build: ./backend-chatbot
+    ports:
+      - "3000:3000"
+    depends_on:
+      - embedding-service
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: ****
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgresql-db:/docker-entrypoint-initdb.d

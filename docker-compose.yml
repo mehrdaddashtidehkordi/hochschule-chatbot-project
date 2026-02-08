@@ -4,7 +4,7 @@ services:
     ports:
       - "9000:8001"
     volumes:
-      - K:/Projects/sentence_transformers/paraphrase-multilingual-MiniLM-L12-v2:/models
+      - K:/sentence_transformers/paraphrase-multilingual-MiniLM-L12-v2:/models
     environment:
       MODEL_PATH: /models
 
@@ -17,10 +17,10 @@ services:
       - db
 
   db:
-    image: postgres:15
+    image: 
     environment:
-      POSTGRES_PASSWORD: ****
+      POSTGRES_PASSWORD:
     ports:
-      - "5432:5432"
+      - ""
     volumes:
-      - ./postgresql-db:/docker-entrypoint-initdb.d
+      - ./postgresql:/docker-entrypoint-initdb.d

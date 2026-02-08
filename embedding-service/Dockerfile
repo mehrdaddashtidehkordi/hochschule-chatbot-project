@@ -8,7 +8,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY app ./app
 
-# مسیر مدل از بیرون mount می‌شود
 ENV MODEL_PATH=/models/paraphrase-multilingual-MiniLM-L12-v2
 
 EXPOSE 8001

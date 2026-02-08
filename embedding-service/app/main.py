@@ -12,7 +12,6 @@ app = FastAPI()
 
 device = "cpu"
 
-# مسیر مدل از ENV خوانده می‌شود، اگر نبود از مسیر ویندوز استفاده می‌شود
 model_path = os.getenv(
     "MODEL_PATH",
     "D:/Projects/sentence_transformers/paraphrase-multilingual-MiniLM-L12-v2"

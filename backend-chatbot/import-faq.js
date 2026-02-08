@@ -6,14 +6,14 @@ import pg from "pg";
 const { Client } = pg;
 
 const DB_CONFIG = {
-  host: "localhost",     
+  host: "",     
   port: 5432,
-  user: "***",
-  password: "***",
-  database: "***",
+  user: "",
+  password: "",
+  database: "",
 };
 
-const EMBEDDING_SERVICE_URL = "http://localhost:9000/embed"; 
+const EMBEDDING_SERVICE_URL = "http://localhost:***/embed"; 
 
 async function main() {
   const client = new Client(DB_CONFIG);

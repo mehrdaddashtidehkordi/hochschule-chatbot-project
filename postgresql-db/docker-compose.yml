@@ -2,8 +2,8 @@ version: "3.9"
 
 services:
   postgres:
-    image: pgvector/pgvector:pg16
-    container_name: pgvector-db
+    image: ****
+    container_name: ****
     environment:
       POSTGRES_USER: ****
       POSTGRES_PASSWORD: ****

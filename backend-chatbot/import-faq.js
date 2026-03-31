@@ -7,7 +7,7 @@ const { Client } = pg;
 
 const DB_CONFIG = {
   host: "",     
-  port: 5432,
+  port: ****,
   user: "",
   password: "",
   database: "",
@@ -18,16 +18,14 @@ const EMBEDDING_SERVICE_URL = "http://localhost:***/embed";
 async function main() {
   const client = new Client(DB_CONFIG);
   await client.connect();
-  console.log("Connected to PostgreSQL");
 
-  const filePath = path.join(process.cwd(), "faqs.json");
+  const filePath = path.join(process.cwd(), "yourfaqfile.json");
   const raw = fs.readFileSync(filePath, "utf8");
   const faqs = JSON.parse(raw);
 
-  console.log(`Loaded ${faqs.length} FAQs from faqs.json`);
+  console.log(`Loaded ${faqs.length} FAQs from yourfaqfile.json`);
 
-  await client.query("DELETE FROM faq;");
-  console.log("Cleared existing rows from faq table");
+  await client.query("DELETE FROM faqtable;");
 
   for (const [index, faq] of faqs.entries()) {
     const { question, answer } = faq;

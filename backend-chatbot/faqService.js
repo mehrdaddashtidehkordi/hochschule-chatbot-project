@@ -1,4 +1,4 @@
-import { db } from "./db.js";
+import { db } from "./db1.js";
 
 export async function findBestAnswer(embedding) {
   const embeddingString = `[${embedding.join(",")}]`;

@@ -1,6 +1,6 @@
 import express from "express";
-import { getEmbedding } from "./embedding.js";
-import { findBestAnswer } from "./faqService.js";
+import { getEmbedding } from "./embedd_file.js";
+import { findBestAnswer } from "./faqServices.js";
 
 const app = express();
 app.use(express.json());
@@ -19,7 +19,7 @@ app.post("/ask", async (req, res) => {
 
     if (!best) {
       return res.json({
-        answer: "متأسفانه پاسخی پیدا نشد.",
+        answer: "No any answer found",
       });
     }
 
@@ -34,6 +34,6 @@ app.post("/ask", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Chatbot running on http://localhost:3000");
+app.listen(****, () => {
+  console.log("Chatbot running on http://localhost:****");
 });

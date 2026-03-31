@@ -1,13 +1,1 @@
-fastapi
-uvicorn[standard]
-
-# PyTorch CPU-only
-torch==2.2.0+cpu
---extra-index-url https://download.pytorch.org/whl/cpu
-
-# نسخه‌های سازگار
-transformers==4.41.2
-sentence-transformers==2.7.0
-
-# مهم: جلوگیری از خطای NumPy
-numpy<2
+Your requirments here

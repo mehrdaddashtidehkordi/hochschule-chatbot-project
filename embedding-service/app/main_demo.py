@@ -14,7 +14,7 @@ device = "cpu"
 
 model_path = os.getenv(
     "MODEL_PATH",
-    "D:/Projects/sentence_transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    "Path/sentence_transformers_demo/paraphrase-multilingual-MiniLM-L12-v2"
 )
 
 model = SentenceTransformer(model_path, device=device)
